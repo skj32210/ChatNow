@@ -1,0 +1,131 @@
+/* ChatWindow.css */
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .chat-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .messages-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .own-message {
+    align-self: flex-end;
+  }
+  
+  .other-message {
+    align-self: flex-start;
+  }
+  
+  .message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    position: relative;
+    }
+      
+    .own-message .message-content {
+        background-color: #4a69bd;
+        color: white;
+        border-bottom-right-radius: 5px;
+    }
+      
+    .other-message .message-content {
+        background-color: #f1f3f4;
+        color: #333;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .message-time {
+        font-size: 0.75rem;
+        color: #777;
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+    .file-attachment {
+        margin-top: 8px;
+    }
+    
+    .message-image {
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 8px;
+    }
+    
+    .file-link {
+        display: block;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .message-form {
+        display: flex;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-top: 1px solid #ddd;
+    }
+    .message-form input[type="text"] {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .message-form button {
+        padding: 8px 16px;
+        background-color: #4a69bd;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .message-form button:hover {
+        background-color: #3c58a8;
+    }
+    .message-form button:disabled {
+        background-color: #a5b1c2;
+        cursor: not-allowed;
+    }
+    .file-input-container {
+        margin-right: 10px;
+    }
+    .file-input {
+        display: none;
+    }
+    .file-input-label {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #e9ecef;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+    }
+    
+    .file-input-label:hover {
+        background-color: #dde2e6;
+    }

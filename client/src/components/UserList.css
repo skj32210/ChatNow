@@ -1,0 +1,43 @@
+/* UserList.css */
+.user-list-container {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .section-title {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #555;
+    background-color: #e9ecef;
+  }
+  
+  .chat-list, .users-list {
+    list-style: none;
+  }
+  
+  .chat-item, .user-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .chat-item:hover, .user-item:hover {
+    background-color: #f1f3f4;
+  }
+  
+  .chat-item.active {
+    background-color: #e8f0fe;
+    border-left: 3px solid #4a69bd;
+  }
+  
+  .chat-name {
+    font-weight: 500;
+  }
+  
+  .last-message {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 3px;
+  }
+  
