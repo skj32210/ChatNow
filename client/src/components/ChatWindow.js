@@ -13,7 +13,7 @@ function ChatWindow({ chat, user, socket }) {
     // Fetch messages for the chat
     const fetchMessages = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/chats/${chat._id}/messages`, {
+        const response = await fetch(`http://localhost:5001/api/chats/${chat._id}/messages`, {
           headers: {
             'x-auth-token': user.token
           }
@@ -60,7 +60,7 @@ function ChatWindow({ chat, user, socket }) {
     
     try {
       setIsLoading(true);
-      const response = await fetch('http://localhost:5000/api/files/upload', {
+      const response = await fetch('http://localhost:5001/api/files/upload', {
         method: 'POST',
         headers: {
           'x-auth-token': user.token
@@ -103,7 +103,7 @@ function ChatWindow({ chat, user, socket }) {
       };
       
       // Send message to server to save
-      const response = await fetch(`http://localhost:5000/api/messages`, {
+      const response = await fetch(`http://localhost:5001/api/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -152,13 +152,13 @@ function ChatWindow({ chat, user, socket }) {
                 <div className="file-attachment">
                   {msg.fileType.startsWith('image/') ? (
                     <img 
-                      src={`http://localhost:5000${msg.fileUrl}`} 
+                      src={`http://localhost:5001${msg.fileUrl}`} 
                       alt={msg.fileName} 
                       className="message-image" 
                     />
                   ) : (
                     <a 
-                      href={`http://localhost:5000${msg.fileUrl}`} 
+                      href={`http://localhost:5001${msg.fileUrl}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="file-link"

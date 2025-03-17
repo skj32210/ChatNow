@@ -12,7 +12,7 @@ function ChatContainer({ user, socket, onLogout }) {
     // Fetch all users
     const fetchUsers = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/users`, {
+        const response = await fetch(`http://localhost:5001/api/users`, {
           headers: {
             'x-auth-token': user.token
           }
@@ -28,7 +28,7 @@ function ChatContainer({ user, socket, onLogout }) {
     // Fetch user chats
     const fetchChats = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/chats`, {
+        const response = await fetch(`http://localhost:5001/api/chats`, {
           headers: {
             'x-auth-token': user.token
           }
@@ -80,7 +80,7 @@ function ChatContainer({ user, socket, onLogout }) {
       }
       
       // Create new chat
-      const response = await fetch(`http://localhost:5000/api/chats`, {
+      const response = await fetch(`http://localhost:5001/api/chats`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -30,6 +30,21 @@ app.get('/', (req, res) => {
   res.send('Chat Server is running');
 });
 
+const authRoutes = require('./routes/authRoutes'); // Import auth routes
+app.use('/api/auth', authRoutes); // Mount auth routes
+
+const chatRoutes = require('./routes/chatRoutes'); // Import chat routes
+app.use('/api/chats', chatRoutes); // Mount chat routes
+
+const messageRoutes = require('./routes/messageRoutes'); // Import message routes
+app.use('/api/messages', messageRoutes); // Mount message routes
+
+const fileRoutes = require('./routes/fileRoutes'); // Import file routes
+app.use('/api/files', fileRoutes); // Mount file routes
+
+const userRoutes = require('./routes/userRoutes'); // Import user routes
+app.use('/api/users', userRoutes); // Mount user routes
+
 // Socket.io connection handling
 io.on('connection', (socket) => {
   console.log('New client connected:', socket.id);
